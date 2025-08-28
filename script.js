@@ -95,7 +95,7 @@ function addToHistory(title, number) {
     let historyList = document.getElementById('history-list');
 
     let entry = document.createElement('div');
-    entry.className = "flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow";
+    entry.className = "flex items-center justify-between p-3 bg-gray-100 border border-gray-200 rounded-lg shadow";
 
     entry.innerHTML = `
         <div>
