@@ -86,6 +86,38 @@ let callHistory = document.getElementById('call-history');
 let coinValue = parseInt(coin.innerText);
 let copyValue = parseInt(copy.innerText);
 
+///////
+
+function addToHistory(title, number) {
+    let now = new Date();
+    let time = now.toLocaleTimeString(); 
+
+    let historyList = document.getElementById('history-list');
+
+    let entry = document.createElement('div');
+    entry.className = "flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow";
+
+    entry.innerHTML = `
+        <div>
+            <p class="font-semibold text-[#111]">${title}</p>
+            <p class="text-gray-600 text-sm">${number}</p>
+        </div>
+        <div class="text-gray-500 text-sm">${time}</div>
+    `;
+
+    historyList.append(entry); // latest call on top
+}
+
+
+//////
+
+document.getElementById("clear-history").addEventListener("click", function () {
+    document.getElementById("history-list").innerHTML = "";
+});
+
+
+////
+
 nationalEmergencyCallButton.addEventListener("click", function () {
 
 
@@ -97,6 +129,7 @@ nationalEmergencyCallButton.addEventListener("click", function () {
         alert("calling " + nationalEmergencyTitle.innerText + " " + nationalEmergencyNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+         addToHistory(nationalEmergencyTitle.innerText, nationalEmergencyNumber.innerText);
 
     }
 })
@@ -115,6 +148,7 @@ policeCallButton.addEventListener("click", function () {
         alert("calling " + policeTitle.innerText + " " + policeNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+        addToHistory(policeTitle.innerText, policeNumber.innerText);
     }
 })
 
@@ -131,6 +165,7 @@ fireServiceCallButton.addEventListener("click", function () {
         alert("calling " + fireServiceTitle.innerText + " " + fireServiceNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+         addToHistory(fireServiceTitle.innerText, fireServiceNumber.innerText);
     }
 })
 
@@ -147,6 +182,7 @@ ambulanceServiceCallButton.addEventListener("click", function () {
         alert("calling " + ambulanceServiceTitle.innerText + " " + ambulanceServiceNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+         addToHistory(ambulanceServiceTitle.innerText, ambulanceServiceNumber.innerText);
     }
 })
 
@@ -163,6 +199,7 @@ womenChildHelplineCallButton.addEventListener("click", function () {
         alert("calling " + womenChildHelplineTitle.innerText + " " + womenChildHelplineNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+         addToHistory(womenChildHelplineTitle.innerText, womenChildHelplineNumber.innerText);
     }
 })
 //////
@@ -178,6 +215,7 @@ antiCorruptionHelplineCallButton.addEventListener("click", function () {
         alert("calling " + antiCorruptionHelplineTitle.innerText + " " + antiCorruptionHelplineNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+         addToHistory(antiCorruptionHelplineTitle.innerText, antiCorruptionHelplineNumber.innerText);
     }
 })
 
@@ -194,6 +232,7 @@ electricityHelplineCallButton.addEventListener("click", function () {
         alert("calling " + electricityHelplineTitle.innerText + " " + electricityHelplineNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+         addToHistory(electricityHelplineTitle.innerText, electricityHelplineNumber.innerText);
     }
 })
 
@@ -210,6 +249,7 @@ bracHelplineCallButton.addEventListener("click", function () {
         alert("calling " + bracHelplineTitle.innerText + " " + bracHelplineNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+         addToHistory(bracHelplineTitle.innerText, bracHelplineNumber.innerText);
     }
 })
 ///////
@@ -224,6 +264,7 @@ bangladeshRailwayHelplineCallButton.addEventListener("click", function () {
         alert("calling " + bangladeshRailwayHelplineTite.innerText + " " + bangladeshRailwayHelplineNumber.innerText + "...")
         coinValue -= 20;
         coin.innerText = coinValue;
+        addToHistory(bangladeshRailwayHelplineTite.innerText, bangladeshRailwayHelplineNumber.innerText);
     }
 })
 
@@ -328,3 +369,4 @@ bangladeshRailwayHelplineCopyButton.addEventListener("click", function () {
     copyValue += 1;
     copy.innerText=copyValue;
 })
+
