@@ -1,9 +1,9 @@
 1.What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 ans: 
-# getElementById ==> it finds or gets the element of the given id.
-# getElementsByClassName ==> it finds all elements with the class name. it could be one or more.
-# querySelector ==> it finds the first element that matches a CSS selector. we have to use loop to get all.
-# querySelectorAll ==> it finds all elements that match. we dont have to use loop for it.
+* getElementById ==> it finds or gets the element of the given id.
+* getElementsByClassName ==> it finds all elements with the class name. it could be one or more.
+* querySelector ==> it finds the first element that matches a CSS selector. we have to use loop to get all.
+* querySelectorAll ==> it finds all elements that match. we dont have to use loop for it.
 
 2.How do you create and insert a new element into the DOM?
 ans:
